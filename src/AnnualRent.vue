@@ -1,8 +1,7 @@
 <script setup lang="ts">
   import { computed, inject } from 'vue'
-  import type IRLData from './IRLData'
 
-  const data:IRLData = inject('data')!
+  const data:any = inject('data')!
 
   // Computed % increase.
   const increase = computed(() => {
