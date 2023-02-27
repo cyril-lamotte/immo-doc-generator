@@ -2,9 +2,8 @@
   import { reactive, onMounted, provide } from 'vue'
   import DataForm from './DataForm.vue'
   import AnnualRent from './AnnualRent.vue'
-  import type IRLData from './IRLData'
 
-  const dataDefault:IRLData = {
+  const dataDefault:any = {
     sender_name: 'M. Y',
     sender_address: '78 bd Matoni<br>53100 Mayenne',
     name: 'M. X',
