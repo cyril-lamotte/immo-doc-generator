@@ -1,3 +1,9 @@
+:root {
+  color-scheme: light dark;
+  --bgcolor: #fff;
+  --text-color: #333;
+  --editable: yellow;
+}
 
 html {
   box-sizing: border-box;
@@ -12,6 +18,8 @@ body {
   margin: 0 20px;
   padding: 20px 20px 100px;
   font-family: 'Times New Roman', Times, serif;
+  background-color: var(--bgcolor);
+  color: var(--text-color)
 }
 
 .align-right {
@@ -24,10 +32,11 @@ body {
   right: 0;
   bottom: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
   width: 200px;
   padding: 20px;
-  border-left: 2px solid pink;
-  background: #fff;
+  border-left: 2px solid var(--editable);
+  background: var(--bgcolor);
   z-index: 1;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -83,6 +92,7 @@ body {
 address {
   margin: 1rem 0;
   font-family: 'Courier New', Courier, monospace;
+  white-space: pre;
 }
 
 .object {
@@ -120,7 +130,7 @@ h2 {
   &:before {
     content: '';
     position: absolute;
-    background: yellow;
+    background: var(--editable);
     top: -5px;
     left: -5px;
     right: -5px;
@@ -142,3 +152,5 @@ h2 {
     display: none;
   }
 }
+
+@import 'dark';

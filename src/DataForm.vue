@@ -49,8 +49,10 @@
 
   <div class="form-row">
     <label for="sender_address">Adresse expéditeur</label>
-    <input type="text" name="sender_address" id="sender_address" :value="data.sender_address"
+    <textarea type="text" name="sender_address" id="sender_address"
+      :value="data.sender_address"
       @input="event => data.sender_address = (event.target as HTMLInputElement).value">
+    </textarea>
   </div>
 
   <div class="form-row">

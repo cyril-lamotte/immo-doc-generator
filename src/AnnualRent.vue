@@ -31,14 +31,15 @@
         <p class="name">
           <span class="uppercase editable">{{ data.name }}</span>
         </p>
-        <address v-html="data.address" class="editable"></address>
+        <address class="editable">{{ data.address }}</address>
       </div>
 
       <div class="sender">
         <p class="name editable">
           {{ data.sender_name }}
         </p>
-        <address v-html="data.sender_address" class="editable">
+        <address class="editable">
+          {{ data.sender_address }}
         </address>
       </div>
     </div>

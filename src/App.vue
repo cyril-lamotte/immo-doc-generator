@@ -31,7 +31,7 @@
 
     // Fill data object with params.
     for (const param of search_params) {
-      if (['name', 'address'].includes(param[0])) {
+      if (['name', 'address', 'sender_name', 'sender_address'].includes(param[0])) {
         data[param[0]] = param[1];
       } else {
         data[param[0]] = parseFloat(param[1]);
