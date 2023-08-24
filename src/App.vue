@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { reactive, onMounted, provide } from 'vue'
-  import DataForm from './DataForm.vue'
-  import AnnualRent from './AnnualRent.vue'
+  import DataForm from "@/views/DataForm.vue"
+  import AnnualRent from "@/views/AnnualRent.vue"
 
   const dataDefault:any = {
     sender_name: 'M. Y',
@@ -42,7 +42,10 @@
 
 <template>
 
-  <DataForm></DataForm>
-  <AnnualRent></AnnualRent>
+  <router-link to="/">Informations</router-link>
+  <router-link to="/quittance-de-loyer">Quittance de loyer</router-link>
+  <router-link to="/revision-annuelle">Révision annuelle</router-link>
+
+  <router-view></router-view>
 
 </template>
