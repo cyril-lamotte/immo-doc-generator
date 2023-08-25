@@ -1,9 +1,7 @@
 <script setup lang="ts">
   import { reactive, onMounted, provide } from 'vue'
-  import DataForm from './DataForm.vue'
-  import AnnualRent from './AnnualRent.vue'
-  import DocumentList from './DocumentList.vue'
-  import RentReceipt from './RentReceipt.vue'
+  import DataForm from "@/views/DataForm.vue"
+  import AnnualRent from "@/views/AnnualRent.vue"
 
   // Default data.
   const dataDefault:any = {
@@ -45,14 +43,7 @@
 
 <template>
 
-  <div class="main-layout">
-    <DataForm></DataForm>
-    <main class="document-area">
-      <DocumentList></DocumentList>
-
-      <AnnualRent></AnnualRent>
-      <RentReceipt></RentReceipt>
-    </main>
-  </div>
+  <DataForm></DataForm>
+  <AnnualRent></AnnualRent>
 
 </template>
