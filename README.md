@@ -1,12 +1,6 @@
 # Immo Doc Generator
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Type Support for `.vue` Imports in TS
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Créer rapidement des documents réutilisables pour la gestion immobilière.
 
 ## Project Setup
 

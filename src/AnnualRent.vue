@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { computed, inject } from 'vue'
 
+  // Get reactive data from App.vue.
   const data:any = inject('data')!
 
   // Computed % increase.
@@ -22,7 +23,7 @@
 </script>
 
 <template>
-<main>
+<div class="document">
 
   <header>
 
@@ -90,5 +91,5 @@
 
   <p class="signature">Le {{ new Date().toLocaleString('fr-FR', { day: 'numeric', month: 'long', year:"numeric"}) }}</p>
 
-</main>
+</div>
 </template>
