@@ -1,11 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import DataForm from "@/views/DataForm.vue"
-import AnnualRent from "@/views/AnnualRent.vue"
+import HomePage from '@/views/HomePage.vue'
+import AnnualRent from '@/views/AnnualRent.vue'
+import RentReceipt from '@/views/RentReceipt.vue'
 
 // Define routes that correspond to a component.
 const routes = [
-  { path: '/', name: 'Informations', component: DataForm },
+  { path: '/', name: 'Accueil', component: HomePage },
   { path: '/revision-annuelle', name: 'Révision annuelle', component: AnnualRent },
+  { path: '/quittance-de-loyer', name: 'Quittance de loyer', component: RentReceipt },
 ]
 
 // Create the router instance and pass the `routes` option.

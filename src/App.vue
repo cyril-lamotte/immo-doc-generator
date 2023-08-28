@@ -1,14 +1,12 @@
 <script setup lang="ts">
   import { reactive, onMounted, provide } from 'vue'
-  import DataForm from "@/views/DataForm.vue"
-  import AnnualRent from "@/views/AnnualRent.vue"
 
   // Default data.
   const dataDefault:any = {
     sender_name: 'M. Y',
-    sender_address: '78 bd Matoni<br>53100 Mayenne',
+    sender_address: '78 bd Matoni\n53100 Mayenne',
     name: 'M. X',
-    address: '6 rue Late<br>53100 Mayenne',
+    address: '6 rue Late\n53100 Mayenne',
     quarter: 1,
     irl_previous: 100,
     irl_current: 105,
@@ -43,7 +41,14 @@
 
 <template>
 
-  <DataForm></DataForm>
-  <AnnualRent></AnnualRent>
+  <nav role="navigation">
+    <ul>
+      <router-link to="/">Accueil</router-link>
+      <router-link to="/quittance-de-loyer">Quittance de loyer</router-link>
+      <router-link to="/revision-annuelle">Révision annuelle</router-link>
+    </ul>
+  </nav>
+
+  <router-view></router-view>
 
 </template>

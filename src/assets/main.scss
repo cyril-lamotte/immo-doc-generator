@@ -2,7 +2,7 @@
   color-scheme: light dark;
   --bgcolor: #fff;
   --text-color: #333;
-  --editable: yellow;
+  --editable: lightyellow;
 }
 
 html {
@@ -24,6 +24,11 @@ body {
 .main-layout {
   display: flex;
   justify-content: space-between;
+}
+
+.document {
+  max-inline-size: 700px;
+  margin: 0 auto;
 }
 
 .document-area {
@@ -49,7 +54,7 @@ body {
   flex-shrink: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
-  flex-basis: 250px;
+  flex-basis: 430px;
   padding: 20px;
   border-left: 2px solid var(--editable);
   background: var(--bgcolor);
@@ -103,6 +108,8 @@ body {
 
 .name {
   font-weight: bold;
+  display: flex;
+  gap: 1rem;
 }
 
 address {
@@ -155,15 +162,35 @@ h2 {
   }
 }
 
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .submit {
+  font-size: inherit;
+  font-family: inherit;
+  display: inline-block;
   border: 2px solid #000;
   background: #000;
   color: #fff;
   border-radius: 3px;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
 @media print {
+  nav,
   .setting-form {
     display: none;
   }
