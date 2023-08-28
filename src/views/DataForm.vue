@@ -34,11 +34,10 @@
 </script>
 
 <template>
-<form class="setting-form">
 
   <div class="form-row">
     <fieldset class="form-group">
-      <legend>Propriétaire</legend>
+      <legend>Bailleur</legend>
 
       <div class="form-row">
         <label for="sender_name">Nom</label>
@@ -143,7 +142,4 @@
     <a :href="queryLink" class="submit" title="Lien direct avec les données actuelles précomplétées">Révision du loyer {{ data.name }}</a>
   </div>
 
-
-
-</form>
 </template>

@@ -31,7 +31,11 @@
 
 <template>
   <div class="main-layout">
-    <DataForm></DataForm>
+
+    <div class="setting-form">
+      <DataForm></DataForm>
+    </div>
+
     <div class="document">
 
       <DocumentHeader></DocumentHeader>

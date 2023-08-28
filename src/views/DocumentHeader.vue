@@ -19,7 +19,7 @@
       <div class="sender">
         <p class="name">
           <span class="uppercase editable">{{ data.sender_name }}</span>
-          <em>(Propriétaire)</em>
+          <em>(Bailleur)</em>
         </p>
         <address class="editable">
           {{ data.sender_address }}

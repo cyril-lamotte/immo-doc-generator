@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "vite-router": "^1.0.1",
-    "vue": "^3.2.45",
-    "vue3-simple-html2pdf": "^0.0.7"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",

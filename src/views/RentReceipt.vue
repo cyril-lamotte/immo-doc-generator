@@ -1,23 +1,46 @@
 <script setup lang="ts">
-  import { inject } from 'vue'
+  import { ref, inject } from 'vue'
   import DataForm from '@/views/DataForm.vue'
   import DocumentHeader from '@/views/DocumentHeader.vue'
   import DocumentObject from '@/views/DocumentObject.vue'
-  import ReceiptForm from '@/views/ReceiptForm.vue'
+  import RentReceiptForm from '@/views/RentReceiptForm.vue'
 
   // Get reactive data from App.vue.
   const data:any = inject('data')!
 
-  // Document object.
-  const object = `Quittance de loyer du mois MOIS ANNEE`;
+  let object = ref();
+  let month = ref();
+  let year = ref();
+
+  // Default value for month and year.
+  monthUpdate(new Date().getMonth());
+  yearUpdate(new Date().getFullYear());
+
+  object.value = getObject();
+
+  function getObject() {
+    return `Quittance de loyer pour ${month.value} ${year.value}`;
+  }
+
+  function monthUpdate(monthNumber: number) {
+    month.value = new Date(2010, monthNumber, 1).toLocaleString('default', { month: 'long' });
+    object.value = getObject();
+  }
+
+  function yearUpdate(yearNumber: number) {
+    year.value = yearNumber;
+    object.value = getObject();
+  }
 
 </script>
 
 <template>
   <div class="main-layout">
 
-    <DataForm></DataForm>
-    <ReceiptForm></ReceiptForm>
+    <div class="setting-form">
+      <RentReceiptForm @month-update="monthUpdate" @year-update="yearUpdate"></RentReceiptForm>
+      <!-- <DataForm></DataForm> -->
+    </div>
 
     <div class="document">
 
@@ -34,7 +57,7 @@
           déclare avoir reçu de <span class="editable">{{ data.name }}</span>
           la somme <span class="editable">{{ data.rent }}</span> euros,
           au titre du paiement du loyer et des charges pour la période de location
-          du 01/07 au 31/07 2023 et lui en donne quittance,
+          <strong>{{ month }} {{ year }}</strong> et lui en donne quittance,
           sous réserve de tous mes droits.</p>
 
         <h2>Détail du règlement</h2>
